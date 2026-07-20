@@ -1,61 +1,95 @@
-# Ashish's Portfolio
+# 📺 Netflix Content Analytics | SQL & Power BI
 
-Welcome to my professional portfolio on GitHub. Here you can find projects, scripts, and analyses that showcase my skills in data analytics and programming.
+## 📌 Project Overview
 
-## Interactive Dashboards
-To see interactive visualizations of some of the data projects featured here, visit my Power BI dashboard:
-[View My Power BI Dashboard](https://app.powerbi.com/reportEmbed?reportId=42ad8f97-4670-48fd-aee3-156b02e07a46&autoAuth=true&ctid=4a5378f9-29f4-4d3e-be89-669d03ada9d8) 
+This project analyses **3,005 Netflix titles** to understand how the content catalogue varies across **content type, genre, production country, release year, ratings, actors, directors, and age certification**.
 
-### <ins> Check the Wiki for insights of the analysis </ins>
+The project combines **SQL-based exploratory analysis** with a **7-page interactive Power BI dashboard** to transform raw Netflix titles and credits data into structured analytical insights.
 
-# Overview of How to Perform the Netflix Titles Analysis
-## Step-by-Step Guide
-### Data Collection
+The analysis focuses on three broad questions:
 
-* Obtain datasets containing information about Netflix titles. For this analysis, we used titles.csv and credits.csv.
-* Ensure the datasets include relevant fields such as title IDs, names, genres, ratings, release years, production countries, and roles of individuals involved.
-Data Preparation
+1. **What does the Netflix content catalogue look like?**
+2. **How do content characteristics such as genre, country, release year, and contributors relate to ratings?**
+3. **What patterns can be identified across IMDb and TMDb rating metrics?**
 
-* Load the datasets into a data analysis tool or programming environment like Python with libraries such as Pandas.
-* Clean the data by handling missing values, removing duplicates, and converting data types where necessary.
-* Merge datasets on common fields (e.g., title IDs) to create a comprehensive dataset.
-### Exploratory Data Analysis (EDA)
+---
 
-* Calculate summary statistics to understand the basic properties of the data (e.g., average scores, runtime).
-* Visualize the distribution of key attributes such as genres, ratings, and release years.
-### Genre Analysis
+## 🎯 Project Objectives
 
-* Identify the most common genres.
-* Calculate the average ratings and runtime for each genre.
-* Visualize the top genres by count and average ratings using bar charts or other appropriate visualizations.
-### Country Analysis
+The project was designed to:
 
-* Analyze the distribution of titles by production country.
-* Calculate and visualize the average ratings for titles from different countries.
-* Use maps and scatter plots to present the geographical distribution and rating comparisons.
-### Release Year Trends
+- Analyse the overall composition of the Netflix content catalogue.
+- Compare **movies and shows** by volume, runtime, ratings, and release trends.
+- Identify the most represented genres and compare their average ratings and runtimes.
+- Analyse content distribution and rating performance across production countries.
+- Examine how the volume and ratings of content changed across release years.
+- Identify frequently appearing actors and directors and compare their associated IMDb ratings.
+- Analyse titles by age certification, runtime, seasons, and IMDb performance.
+- Measure relationships between **IMDb scores, TMDb scores, and IMDb vote counts**.
+- Build an interactive **Power BI dashboard** to communicate findings through KPIs and visual analysis.
 
-* Analyze the number of titles released each year.
-* Calculate the average ratings per release year.
-* Visualize trends over time using line charts to identify any patterns or significant changes.
-### Role Analysis
+---
 
-* Identify the most prolific actors and directors by the number of titles.
-* Calculate the average ratings for titles associated with top actors and directors.
-* Visualize the top actors and directors by count and average ratings using bar charts and treemaps.
-### Title Analysis
+## 🛠️ Tools & Technologies
 
-* Analyze titles by age certification to understand content suitability.
-* Identify the top-rated titles by average IMDb scores.
-* Examine the average number of seasons for TV shows.
-* Visualize the distribution and ratings of titles by age certification and average scores.
-### Regression Analysis
+| Tool | Application |
+|---|---|
+| **PostgreSQL / SQL** | Data querying, joins, CTEs, aggregations, window functions and exploratory analysis |
+| **Power BI** | Data modelling, dashboard development and interactive visualisation |
+| **DAX** | KPI calculations and analytical measures |
+| **Power Query** | Data preparation and transformation |
 
-* Explore correlations between different variables such as IMDb scores, TMDB scores, and the number of votes.
-* Calculate correlation coefficients to quantify relationships.
-* Visualize the correlations using scatter plots with trend lines.
+---
 
-## Contact
-Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/ashishjohnson/) or view my other social media profiles linked in this repository.
+## 📂 Dataset
 
-Thank you for visiting my portfolio!
+The project uses two primary datasets:
+
+### `titles.csv`
+
+Contains title-level information including:
+
+- Title name and ID
+- Content type: Movie or Show
+- Release year
+- Age certification
+- Runtime
+- Genres
+- Production countries
+- Number of seasons
+- IMDb score
+- IMDb votes
+- TMDb score
+- TMDb popularity
+
+### `credits.csv`
+
+Contains contributor-level information including:
+
+- Title ID
+- Actor and director names
+- Character information
+- Contributor roles
+
+The datasets are connected using the common **title ID**, enabling title-level information to be analysed alongside actors and directors.
+
+---
+
+## 🔄 Analytical Workflow
+
+```text
+Netflix Titles + Credits Data
+            ↓
+      Data Preparation
+            ↓
+       PostgreSQL
+            ↓
+   SQL Analysis & EDA
+            ↓
+ Titles + Credits Integration
+            ↓
+       Power BI + DAX
+            ↓
+  7-Page Interactive Dashboard
+            ↓
+     Analytical Insights
